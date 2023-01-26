@@ -8,6 +8,7 @@ public class ExampleTest {
     private Main main;
     private String expectedGreeting, expectedReverseGreeting;
     private String expectedReverse1, expectedReverse2, expectedReverse3;
+    private String expectedMyNewString;
     
     @Before
     public void setUp() {
@@ -17,6 +18,7 @@ public class ExampleTest {
         expectedReverse1 = "topaeT elttiL a m'I";
         expectedReverse2 = "elddiD elddiD yeH";
         expectedReverse3 = "kcoD yrokciD yrokciH";
+        expectedMyNewString = "!noillib 714.1 si aidnI fo noitalupop ehT";
     }
         
     @Test
@@ -49,4 +51,9 @@ public class ExampleTest {
         assertEquals(expectedReverse3, actual);
     }
     
+    @Test
+    public void testMyNewReverseMessage() {
+        String actual = main.reverse("The population of India is 1.417 billion!");
+        assertEquals(expectedMyNewString, actual);
+    }
 }
